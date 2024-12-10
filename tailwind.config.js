@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        customRose: '#FF66B2',  // Cor personalizada de rosa
+      },
+    },
   },
   plugins: [],
 }
