@@ -5,10 +5,10 @@ export const menuItems = [
   },
   {
     text: "Timer",
-    href: "/",
+    href: "/timer",
   },
   {
     text: "Sorteio",
-    href: "/sorteio",
+    href: "/luck",
   },
 ];

@@ -3,13 +3,14 @@ import Menu from "./menu"
 
 function Header() {
     return (
-        <header className="w-full bg-black opacity- flex items-center justify-center shadow-xl">
-            <div className="container  flex items-center justify-between p-4">
-                <Logo />
-                <Menu />
-            </div>
-
-        </header>
+        <header className="w-full bg-transparent opacity- flex 
+         items-center justify-center  px-2">
+        <div className="container flex items-center justify-between p-4 px-0">
+          <Logo />
+          <Menu />
+        </div>
+      </header>
+      
     )
 }
 

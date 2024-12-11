@@ -1,6 +1,9 @@
 
+import Congratulation from "../components/congratulation";
 import ContainerPage from "../components/containerPage";
-import Video from "../components/video";
+import CountDown from "../components/countDown";
+import Overlay from "../components/overlay";
+
 import WrapperPage from "../components/wrapperPage";
 
 
@@ -9,11 +12,10 @@ export default function Timer() {
     return (
 
         <ContainerPage>
-            <Video
-                url={'/video/timer.mp4'}
-            />
-            <WrapperPage>
-
+            {/* <Overlay /> */}
+            <WrapperPage className='items-center md:justify-center sm:mt-12 flex-col'>
+                <Congratulation />
+                <CountDown />
             </WrapperPage>
         </ContainerPage >
     )

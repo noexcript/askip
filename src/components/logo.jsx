@@ -5,9 +5,9 @@ export default function Logo() {
         <h1>
             <Link
                 to="/"
-                className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-rose-500 via-deepPink-600 to-violet-600 font-sans text-4xl font-extrabold italic animate-gradient"
+                className="font-rubik text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-rose-500 via-deepPink-600 to-violet-600  text-4xl font-extrabold italic animate-gradient"
             >
-                ASKIP
+                <img className="w-[40px] h-[40px] object-cover" src="/img/logo.png" alt="askip-logo" />
             </Link>
         </h1>
 
