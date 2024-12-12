@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   base: '/askip/',  
   build: {
-    outDir: 'dist/askip',  
+    outDir: 'dist',  
   },
 })
