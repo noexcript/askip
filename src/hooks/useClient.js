@@ -1,6 +1,5 @@
 import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 import { db } from "../firebase";
 import getOrCreatedClientId from "../utils/clientId";
 
