@@ -14,9 +14,9 @@ export default function Footer() {
             </div>
             <div className="flex gap-2">
 
-            <span><a href="">Facebook</a></span>|
-            <span><a href="">Instagram</a></span>|
-            <span><a href="">Youtube</a></span>
+            <span><a href="https://www.facebook.com/share/18YqQNGcUf/?mibextid=LQQJ4d" target="_blank">Facebook</a></span>|
+            <span><a href="https://www.instagram.com/askipmob_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a></span>|
+            <span><a href="https://www.youtube.com/@ASKIPMob_Oficial" target="_blank">Youtube</a></span>
             </div>
         </div>
     )

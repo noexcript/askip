@@ -6,6 +6,7 @@ import Timer from "./pages/timer";
 import Luck from "./pages/luck";
 import { Context } from "./context";
 import Footer from "./components/footer";
+import Timing from "./components/timing";
 
 const App = () => {
   const { participant } = useContext(Context)
@@ -17,6 +18,7 @@ const App = () => {
   return (
     <div className="h-screen w-screen bg-gradient-to-tl from-green-950 via-blue-950 to-black animate-gradient bg-[length:400%_400%] flex flex-col">
 
+    <Timing />
       <Router>
         <Header />
         <Routes>

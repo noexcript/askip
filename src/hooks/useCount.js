@@ -41,13 +41,21 @@ export const useCount = () => {
   }, []);
 
   const inPts = ["dias", "horas", "mins", "seg"];
+   const inPts_ = ["d", "h", "m", "s"];
 
+  
   const timesLeft = Object.keys(timeLeft).reduce((acc, key, index) => {
     acc[inPts[index]] = timeLeft[key];
+    return acc;
+  }, {});
+  
+  const timesLeftTip = Object.keys(timeLeft).reduce((acc, key, index) => {
+    acc[inPts_[index]] = timeLeft[key];
     return acc;
   }, {});
 
   return {
     timesLeft,
+    timesLeftTip
   };
 };
