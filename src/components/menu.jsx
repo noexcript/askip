@@ -3,19 +3,28 @@ import { menuItems } from "../mock/menuItems";
 import MenuItem from "./menuItem";
 import { Context } from "../context";
 
+const timesLeft_ = {
+    'dias': 0,
+    'horas': 0,
+    'mins': 0,
+    'seg': 0,
+}
+
 
 function Menu() {
 
-    const { timesLeft, click } = useContext(Context)
+    const { timesLeft, click, participant } = useContext(Context)
 
 
     // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     // const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+
+
     return (
 
-        <nav className="flex items-center justify-end gap-2 ">
+        <nav className="flex items-center justify-end gap-2 mt-4 md:mt-10">
 
             {/* <button
                 className="lg:hidden text-black"
@@ -44,12 +53,19 @@ function Menu() {
                 </div>
                 <div className="flex gap-4 text-sm font-bold">
 
-                    {Object.entries(timesLeft).map(([key, value], index) => (
+                    {!participant.clicked && Object.entries(timesLeft_).map(([key, value], index) => (
                         <div className="flex flex-col items-center justify-center" key={index}>
                             <span>{value}</span>
                             <span className="hidden md:flex">{key}</span>
                         </div>
-                    ))}
+                    ))  
+                    // Object.entries(timesLeft_).map(([key, value], index) => (
+                    //     <div className="flex flex-col items-center justify-center" key={index}>
+                    //         <span>{value}</span>
+                    //         <span className="hidden md:flex">{key}</span>
+                    //     </div>
+                    // ))
+                    }
 
                 </div>
                 {/* {menuItems.map((item, index) => (

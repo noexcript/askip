@@ -55,6 +55,10 @@
   }
 }
 
+html{
+  overflow: hidden;
+}
+
 
 .roboto-thin {
   font-family: "Roboto", sans-serif;

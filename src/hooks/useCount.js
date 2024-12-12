@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 export const useCount = () => {
   const targetDate = new Date("2024-12-12T23:59:59");
+  const [timing, setTiming] = useState(true);
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -21,6 +22,7 @@ export const useCount = () => {
         minutes: 0,
         seconds: 0,
       });
+      setTiming(!timing);
     } else {
       const days = Math.floor(difference / (1000 * 60 * 60 * 24));
       const hours = Math.floor(

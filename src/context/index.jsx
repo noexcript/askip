@@ -1,6 +1,6 @@
 import { createContext } from "react";
 import { useCount } from "../hooks/useCount";
-import { useParticipant } from "../hooks/useParticipant";
+import { useParticipant } from "../hooks/useParticipan";
 import { useClick } from "../hooks/useClick";
 
 const Context = createContext();

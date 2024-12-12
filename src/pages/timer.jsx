@@ -12,9 +12,9 @@ export default function Timer() {
     return (
 
         <ContainerPage>
+                <Congratulation  />
             {/* <Overlay /> */}
-            <WrapperPage className='items-center md:justify-center sm:mt-12 flex-col'>
-                <Congratulation />
+            <WrapperPage className='items-center md:justify-center  flex-col'>
                 <CountDown />
             </WrapperPage>
         </ContainerPage >

@@ -12,7 +12,7 @@ export default function Home() {
 
 
             {/* <Overlay /> */}
-            <WrapperPage className="md:justify-center">
+            <WrapperPage className="md:justify-center gap-36 py-4">
                 <HomeText />
                 <ButtonLink />
             </WrapperPage>
