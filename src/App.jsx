@@ -5,6 +5,7 @@ import Home from './pages/home'
 import Timer from "./pages/timer";
 import Luck from "./pages/luck";
 import { Context } from "./context";
+import Footer from "./components/footer";
 
 const App = () => {
   const { participant } = useContext(Context)
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/luck" element={<Luck />} /> */}
 
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

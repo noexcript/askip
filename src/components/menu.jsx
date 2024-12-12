@@ -24,7 +24,7 @@ function Menu() {
 
     return (
 
-        <nav className="flex items-center justify-end gap-2 mt-4 md:mt-10">
+        <nav className="flex items-center justify-end gap-2 mt-3 md:mt-10">
 
             {/* <button
                 className="lg:hidden text-black"
@@ -48,10 +48,10 @@ function Menu() {
 
 
             <div className="flex items-center gap-2 flex-col text-white">
-                <div className="text-sm font-bold">
-                    NUMERO DE PARTICIPANTES : {click}
+                <div className="text-[10px] lg:text-sm font-bold border p-1 px-2  lg:p-2 lg:px-4 rounded-sm roboto-black lg:roboto-regular flex gap-2">
+                    <span className="hidden md:flex">PARTICIPANTES : </span>   <span className="text-yellow-">111212121321</span> 
                 </div>
-                <div className="flex gap-4 text-sm font-bold">
+                {/* <div className="flex gap-4 text-sm font-bold">
 
                     {!participant.clicked && Object.entries(timesLeft_).map(([key, value], index) => (
                         <div className="flex flex-col items-center justify-center" key={index}>
@@ -70,7 +70,7 @@ function Menu() {
                 </div>
                 {/* {menuItems.map((item, index) => (
                     <MenuItem key={index} href={item.href} text={item.text} />
-                ))} */}
+                ))} */} 
             </div>
 
 

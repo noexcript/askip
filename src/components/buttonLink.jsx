@@ -5,15 +5,16 @@ export default function ButtonLink() {
   const { storeClick, registerClick } = useContext(Context)
 
   const handlerClick = async () => {
-    // await storeClick()
-    // await registerClick()
+    await storeClick()
+    await registerClick()
 
   }
   return (
     <a
-      onClick={handlerClick}
-      href="javascript:void()"
-      className="btn-color relative inline-block  rounded-sm shadow-2xl bg-transparent text-blue-950  font-normal p-3 px-6 rounded-0 group overflow-hidden hover:bg-gradient-to-r border border-white
+    
+      href="https://scwz.me/WjSANr"
+      target="_self"
+      className="btn-color roboto-regular  relative inline-block  rounded-sm shadow-2xl bg-transparent text-blue-950  font-normal p-3 px-6 rounded-0 group overflow-hidden hover:bg-gradient-to-r border border-white
         bg-white
            hover:font-semibold
            hover:text-white"
