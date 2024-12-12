@@ -9,10 +9,10 @@ export default function HomeText() {
             </p>
 
 
-            <p className="text-sm md:text-md lg:text-2xl font-semiBold italic leading-snug roboto-regular ">
+            <p className="text-sm md:text-md lg:text-2xl font-semiBold italic leading-snug roboto-regularn text-center ">
                 Todas as etapas são de caracter obrigatório
             </p>
-            <p className="text-sm md:text-md lg:text-2xl   leading-snug roboto-regular ">A falta de uma das etapas te tornará ilegível ao prémio</p>
+            <p className="text-sm md:text-md lg:text-2xl   leading-snug roboto-regular text-center ">A falta de uma das etapas te tornará ilegível ao prémio</p>
         </div>
     )
 }
