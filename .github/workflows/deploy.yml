@@ -3,10 +3,10 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - dev 
+      - dev_ 
   pull_request:
     branches:
-      - dev
+      - dev_
 
 jobs:
   build:
