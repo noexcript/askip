@@ -1,6 +1,11 @@
+import { useContext } from "react"
+import { Context } from "../context"
+
 export default function ButtonLink() {
+  const { storeClick } = useContext(Context)
   return (
     <a
+      onClick={storeClick}
       href="#"
       className="btn-color relative inline-block  rounded-sm shadow-2xl bg-transparent text-blue-950  font-normal p-3 px-6 rounded-0 group overflow-hidden hover:bg-gradient-to-r border border-white
         bg-white

@@ -1,11 +1,12 @@
 import React, { useContext, useState } from "react";
 import { menuItems } from "../mock/menuItems";
 import MenuItem from "./menuItem";
-import { CountContext } from "../context/count";
+import { Context } from "../context";
+
 
 function Menu() {
 
-    const { timesLeft } = useContext(CountContext)
+    const { timesLeft, click } = useContext(Context)
 
 
     // const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,7 +40,7 @@ function Menu() {
 
             <div className="flex items-center gap-2 flex-col text-white">
                 <div className="text-sm font-bold">
-                    NUMERO DE PARTICIPANTES : 1243
+                    NUMERO DE PARTICIPANTES : {click}
                 </div>
                 <div className="flex gap-4 text-sm font-bold">
 
