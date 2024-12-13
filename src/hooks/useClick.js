@@ -44,11 +44,8 @@ const useClick = () => {
       const clientRef_ = doc(db, "clients", clientId);
       const data = await getDoc(clientRef_);
       if (!data.exists()) return;
-
       const clientRef = doc(db, "participants", clientId);
       const participantDoc = await getDoc(clientRef);
-      console.log(participantDoc.data())
-
       if (participantDoc.exists()) {
         setParticipant(participantDoc.data());
       } else {
