@@ -7,6 +7,7 @@ import Luck from "./pages/luck";
 import { Context } from "./context";
 import Footer from "./components/footer";
 import Timing from "./components/timing";
+import About from "./pages/about";
 
 const App = () => {
   const { participant } = useContext(Context)
@@ -23,8 +24,8 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={isClicked ? <Timer /> : < Home />} />
-          {/* <Route path="/timer" element={<Timer />} />
-          <Route path="/luck" element={<Luck />} /> */}
+          <Route path="/about" element={<About />} />
+          {/* <Route path="/luck" element={<Luck />} /> */}
 
         </Routes>
         <Footer />

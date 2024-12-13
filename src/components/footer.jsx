@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="flex gap-2">
 
             <span>&copy; {getYear()} Copyright</span> |
-            <span><Link>Sobre</Link></span> <span className="hidden md:flex">|</span> 
+            <span><Link to="/about">Sobre</Link></span> <span className="hidden md:flex">|</span> 
             </div>
             <div className="flex gap-2">
 
