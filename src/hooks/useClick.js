@@ -28,8 +28,7 @@ const useClick = () => {
         clicked: true,
         when: new Date(),
         client: data.data(),
-      };
-      console.log(data.data());
+      }
       await setDoc(clientRef, newClick);
       setParticipant(newClick);
     } catch (error) {

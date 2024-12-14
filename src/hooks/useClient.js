@@ -69,9 +69,7 @@ const useClient = () => {
     }
   };
 
-  useEffect(() => {
-    trackClientVisit();
-  }, []);
+
 
   //   const updateClientPreferences = async (newPreferences) => {
   //     if (clientData) {
@@ -107,6 +105,7 @@ const useClient = () => {
   //   };
   return {
     clientData,
+    trackClientVisit
     // updateClientPreferences,
   };
 };
