@@ -31,7 +31,6 @@ const Pages = () => {
                     <Route path="/" element={isClicked ? <Timer /> : < Home />} />
                     <Route path="/participant/:link" element={< Home />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/timer" element={<Timer />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
                 <Footer />
