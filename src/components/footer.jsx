@@ -6,7 +6,7 @@ export default function Footer() {
         return (new Date()).getFullYear()
     }
     return (
-        <div className=" flex-col md:flex-row flex items-center justify-center text-white gap-2 p-2 roboto-regular mb-14">
+        <div className=" flex-col md:flex-row flex items-center justify-center text-white gap-2 p-2 roboto-regular ">
             <div className="flex gap-2">
 
             <span>&copy; {getYear()} Copyright</span> |

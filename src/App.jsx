@@ -11,7 +11,7 @@ const Pages = lazy(() =>
 const App = () => {
 
   return (
-    <div className="h-screen w-screen bg-gradient-to-tl from-green-950 via-blue-950 to-black animate-gradient bg-[length:400%_400%] flex flex-col">
+    <div className="min-h-screen w-screen bg-gradient-to-tl from-green-950 via-blue-950 to-black animate-gradient bg-[length:400%_400%] flex flex-col justify-between">
       <Suspense fallback={<Loading />}>
         <Pages />
       </Suspense>
