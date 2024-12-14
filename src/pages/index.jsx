@@ -12,7 +12,7 @@ import NotFound from "./notFound";
 
 
 const Pages = () => {
-    const { participant, isTiming } = useContext(Context) || {}
+    const { participant, isTiming } = useContext(Context)
     const [isClicked, setClicked] = useState(false)
 
 
