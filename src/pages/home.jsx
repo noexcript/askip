@@ -1,12 +1,30 @@
+import { useNavigate, useParams } from "react-router-dom";
 import ButtonLink from "../components/buttonLink";
 import ContainerPage from "../components/containerPage";
 import HomeText from "../components/homeText";
 
 import WrapperPage from "../components/wrapperPage";
+import { useContext, useEffect } from "react";
+import { Context } from "../context";
 
 
 
 export default function Home() {
+
+    const { storeClick, registerClick } = useContext(Context)
+    const { link } = useParams();
+
+    const navigation = useNavigate()
+
+
+
+    useEffect(() => {
+        if (link) {
+            storeClick()
+            registerClick()
+            navigation('/')
+        }
+    })
 
     return (
         <ContainerPage>
