@@ -21,7 +21,7 @@ export default function Home() {
             registerClick()
             navigation('/')
         }
-    })
+    }, [])
 
     return (
         <ContainerPage>

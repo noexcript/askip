@@ -20,7 +20,7 @@ const Pages = () => {
     useEffect(() => {
         setClicked(participant.clicked)
         // setTiming(false)
-    })
+    }, [])
 
     return (
         <>

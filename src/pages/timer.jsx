@@ -15,7 +15,7 @@ export default function Timer() {
 
     useEffect(()=>{
         setTiming(false)
-    })
+    }, [])
    
 
     return (

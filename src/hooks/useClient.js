@@ -22,14 +22,14 @@ const useClient = () => {
 
   const generateClientFingerprint = () => {
     return {
-      userAgent: navigator.userAgent,
-      language: navigator.language,
-      screenResolutation: `${window.screen.width}x${window.screen.height}`,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      userAgent: navigator.userAgent || "unknown",
+      language: navigator.language || "unknown",
+      screenResolutation: window.screen
+        ? `${window.screen.width}x${window.screen.height}`
+        : "unknown",
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || "unknown",
     };
   };
-
-  
 
   const trackClientVisit = async () => {
     const clientId = getOrCreatedClientId();
@@ -42,8 +42,8 @@ const useClient = () => {
       if (!clientDoc.exists()) {
         const newClientData = {
           id: clientId,
-          firstVisit: new Date(),
-          lastVisit: new Date(),
+          firstVisit: new Date().toISOString(),
+          lastVisit: new Date().toISOString(),
           visitCount: 1,
           preferences: {
             fingerprint,
@@ -51,14 +51,13 @@ const useClient = () => {
           },
         };
 
-
         await setDoc(clientRef, newClientData);
 
         setClientData(newClientData);
       } else {
         const updatedData = {
           ...clientDoc.data(),
-          lastVisit: new Date(),
+          lastVisit: new Date().toDateString(),
           visitCount: (clientDoc.data().visitCount || 0) + 1,
         };
 
@@ -71,9 +70,8 @@ const useClient = () => {
   };
 
   useEffect(() => {
-      trackClientVisit();
-    
-  });
+    trackClientVisit();
+  }, []);
 
   //   const updateClientPreferences = async (newPreferences) => {
   //     if (clientData) {

@@ -9,7 +9,7 @@ export default function NotFound() {
     
     useEffect(() => {
         setTiming(true)
-    })
+    }, [])
     return (
         <ContainerPage>
 
