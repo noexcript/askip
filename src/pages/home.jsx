@@ -11,14 +11,11 @@ import { Context } from "../context";
 
 export default function Home() {
 
-    const { storeClick, registerClick } = useContext(Context)
+    const { storeClick, registerClick, setTiming } = useContext(Context)
     const { link } = useParams();
-
     const navigation = useNavigate()
-
-
-
     useEffect(() => {
+        setTiming(true)
         if (link) {
             storeClick()
             registerClick()
