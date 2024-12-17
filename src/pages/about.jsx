@@ -26,7 +26,7 @@ export default function About() {
                             <span className="text-red-500 text-2xl  md:text-3xl font-normal uppercase"><strong>AskipMob</strong> </span>
                         </div>
                         <p className="w-full text-white whitespace-break-spaces text-lg font-[500px] text-justify md:text-2xl  leading-snug mt-4">
-                            É um coletivo e produtora musical que reúne artístas que se definem pela inovação e pela criatividade contemporânea . Com o objetivo de transformar ideias em projetos de impacto, o coletivo combina talentos emergentes, tecnologias modernas e uma visão estratégica para criar experiências autênticas e cativantes. Mais que produzir música, a Askip Mob actua em diversas áreas artísticas promovendo, deste modo, conexões emocionais e culturais, consolidando-se como referência na criação de música e arte moderna.
+                            É um coletivo e produtora musical que reúne artístas que se definem pela inovação e pela criatividade contemporânea . Com o objetivo de transformar ideias em projetos de impacto, o coletivo combina talentos emergentes, tecnologias modernas e uma visão estratégica para criar experiências autênticas e cativantes. Mais que produzir música, a <strong className="uppercase">Askip Mob</strong>  actua em diversas áreas artísticas promovendo, deste modo, conexões emocionais e culturais, consolidando-se como referência na criação de música e arte moderna.
                         </p>
                     </div>
                     <div className="flex w-full gap-2 flex-col items-">
