@@ -23,9 +23,9 @@ export default function About() {
                     <div>
                         <div className="flex gap-4 flex-row items-center">
                             
-                            <span className="text-red-500 text-2xl  md:text-4xl font-norma"><strong>AskipMob</strong> </span>
+                            <span className="text-red-500 text-2xl  md:text-3xl font-normal uppercase"><strong>AskipMob</strong> </span>
                         </div>
-                        <p className="w-full text-white whitespace-break-spaces text-lg font-[500px] text-justify indent-16 md:text-2xl  leading-snug mt-4">
+                        <p className="w-full text-white whitespace-break-spaces text-lg font-[500px] text-justify md:text-2xl  leading-snug mt-4">
                             É um coletivo e produtora musical que reúne artístas que se definem pela inovação e pela criatividade contemporânea . Com o objetivo de transformar ideias em projetos de impacto, o coletivo combina talentos emergentes, tecnologias modernas e uma visão estratégica para criar experiências autênticas e cativantes. Mais que produzir música, a Askip Mob actua em diversas áreas artísticas promovendo, deste modo, conexões emocionais e culturais, consolidando-se como referência na criação de música e arte moderna.
                         </p>
                     </div>
@@ -34,7 +34,7 @@ export default function About() {
                             <img src="/img/sorteio.png" alt="" className="w-[50px]" />
                             <span className="text-white uppercase text-xl md:text-2xl  ">SORTEIO</span>
                         </div>
-                        <p className="w-full text-white whitespace-break-spaces font-[500px] text-lg text-justify md:text-2xl  leading-snug indent-16 mt-2">
+                        <p className="w-full text-white whitespace-break-spaces font-[500px] text-lg text-justify md:text-2xl  leading-snug mt-2">
                             Foi criado como comemoração do primeiro ano de atuação do coletivo, mesmo que sútil os primeiros projetos foram bem aceitos pelo o primeiro público da MOB. Por este feito, queremos selar este ano e marcar um novo arco com o primeiro projeto solo do artista  <strong><i>YOUNG KILLAN</i></strong> com mixtape <strong>D13</strong> . Não perca o seu tempo e resgate o seu prêmio.
                         </p>
                     </div>
