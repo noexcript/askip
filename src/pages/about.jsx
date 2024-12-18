@@ -15,14 +15,11 @@ export default function About() {
 
     return (
         <ContainerPage className='justify-start flex-col  my-4 flex-auto'>
-
-
-            {/* <Overlay /> */}
             <WrapperPage className="md:justify-center gap-36 py-4 items-start h-full ">
                 <Paragraph>
                     <div>
                         <div className="flex gap-4 flex-row items-center">
-                            
+
                             <span className="text-red-500 text-2xl  md:text-3xl font-normal uppercase"><strong>AskipMob</strong> </span>
                         </div>
                         <p className="w-full text-white whitespace-break-spaces text-lg font-[500px] text-justify md:text-2xl  leading-snug mt-4">
