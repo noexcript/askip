@@ -8,32 +8,35 @@ import Timing from '../components/timing'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import NotFound from "./notFound";
+import Login from "./login";
+import Main from "./main";
+import TimingMiddleware from "@/middleware/timingMiddleware";
+import Luck from "./luck";
 
 
 
 const Pages = () => {
-    const { participant, isTiming } = useContext(Context)
-    const [isClicked, setClicked] = useState(false)
-
-
-
-    useEffect(() => {
-        setClicked(participant.clicked)
-        // setTiming(false)
-    }, [])
+    const { isTiming } = useContext(Context)
 
     return (
         <>
             {isTiming && <Timing />}
             <Router>
-                <Header />
                 <Routes>
-                    <Route path="/" element={isClicked ? <Timer /> : < Home />} />
-                    <Route path="/participant/:link" element={< Home />} />
-                    <Route path="/about" element={<About />} />
+                    <Route path="/" element={<Main />} >
+                        <Route index element={
+                            <TimingMiddleware>
+                                < Home />
+                            </TimingMiddleware>
+                        } />
+                        <Route path="/participant/:link" element={< Home />} />
+                        <Route path="/winner" element={< Luck />} />
+                        <Route path="/about" element={<About />} />
+                    </Route>
+                    <Route path="/login-askipmob" element={<Login />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
-                <Footer />
+
             </Router>
         </>
     );

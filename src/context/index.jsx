@@ -9,7 +9,7 @@ const Context = createContext();
 const CountProvider = ({ children }) => {
   const { timesLeft, timesLeftTip } = useCount();
   const { click, storeClick } = useParticipant()
-  const { participant, registerClick } = useClick()
+  const { participant, registerClick, isLoading } = useClick()
   const [isTiming, setTiming] = useState(false)
   const { trackClientVisit } = useClient()
 
@@ -19,7 +19,7 @@ const CountProvider = ({ children }) => {
   }, [])
 
   return (
-    <Context.Provider value={{ timesLeft, click, storeClick, participant, registerClick, timesLeftTip, setTiming, isTiming }}>
+    <Context.Provider value={{ timesLeft, click, storeClick, participant, registerClick, timesLeftTip, setTiming, isTiming, isLoading }}>
       {children}
     </Context.Provider>
   );

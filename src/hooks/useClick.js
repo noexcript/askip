@@ -5,6 +5,7 @@ import getOrCreatedClientId from "../utils/clientId";
 
 const useClick = () => {
   const clientId = getOrCreatedClientId();
+  const [isLoading, setLoading] = useState(false);
   const [participant, setParticipant] = useState({
     id: "",
     clicked: false,
@@ -28,7 +29,7 @@ const useClick = () => {
         clicked: true,
         when: new Date(),
         client: data.data(),
-      }
+      };
       await setDoc(clientRef, newClick);
       setParticipant(newClick);
     } catch (error) {
@@ -39,7 +40,7 @@ const useClick = () => {
   const trackParticipant = async () => {
     try {
       if (!clientId) return;
-
+      setLoading(true)
       const clientRef_ = doc(db, "clients", clientId);
       const data = await getDoc(clientRef_);
       if (!data.exists()) return;
@@ -57,17 +58,20 @@ const useClick = () => {
         }));
       }
     } catch (error) {
+     
       console.error("Error to get participant:  ", error);
     }
   };
 
   useEffect(() => {
     trackParticipant();
+    setLoading(false)
   }, []);
 
   return {
     participant,
     registerClick,
+    isLoading
   };
 };
 
