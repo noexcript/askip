@@ -3,6 +3,7 @@ import { useCount } from "../hooks/useCount";
 import { useParticipant } from "../hooks/useParticipan";
 import { useClick } from "../hooks/useClick";
 import { useClient } from "../hooks/useClient";
+import { useAuth } from "@/hooks/useAuth";
 
 const Context = createContext();
 
@@ -12,14 +13,14 @@ const CountProvider = ({ children }) => {
   const { participant, registerClick, isLoading } = useClick()
   const [isTiming, setTiming] = useState(false)
   const { trackClientVisit } = useClient()
-
+  const { user, signin, signout, isAuthenticated } = useAuth()
 
   useEffect(() => {
     trackClientVisit()
   }, [])
 
   return (
-    <Context.Provider value={{ timesLeft, click, storeClick, participant, registerClick, timesLeftTip, setTiming, isTiming, isLoading }}>
+    <Context.Provider value={{ timesLeft, click, storeClick, participant, registerClick, timesLeftTip, setTiming, isTiming, isLoading, user, signin, signout, isAuthenticated }}>
       {children}
     </Context.Provider>
   );

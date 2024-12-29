@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 export const useCount = () => {
-  const targetDate = new Date("2024-12-30T23:59:59");
-  const [timing, setTiming] = useState(true);
+  // Definindo a data alvo fora do hook para evitar recriações desnecessárias
+  const targetDate = useMemo(() => new Date("2025-01-13T23:59:59"), []);
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -22,7 +22,6 @@ export const useCount = () => {
         minutes: 0,
         seconds: 0,
       });
-      setTiming(!timing);
     } else {
       const days = Math.floor(difference / (1000 * 60 * 60 * 24));
       const hours = Math.floor(
@@ -38,24 +37,29 @@ export const useCount = () => {
   useEffect(() => {
     const interval = setInterval(calculateTimeLeft, 1000);
     return () => clearInterval(interval);
-  }, []);
+  }, [targetDate]); // O intervalo depende apenas da data-alvo
 
-  const inPts = ["dias", "horas", "mins", "seg"];
-   const inPts_ = ["d", "h", "m", "s"];
+  // Constantes que não mudam
+  const inPts = useMemo(() => ["dias", "horas", "mins", "seg"], []);
+  const inPts_ = useMemo(() => ["d", "h", "m", "s"], []);
 
-  
-  const timesLeft = Object.keys(timeLeft).reduce((acc, key, index) => {
-    acc[inPts[index]] = timeLeft[key];
-    return acc;
-  }, {});
-  
-  const timesLeftTip = Object.keys(timeLeft).reduce((acc, key, index) => {
-    acc[inPts_[index]] = timeLeft[key];
-    return acc;
-  }, {});
+  // Convertendo para os pontos de tempo
+  const timesLeft = useMemo(() => {
+    return Object.keys(timeLeft).reduce((acc, key, index) => {
+      acc[inPts[index]] = timeLeft[key];
+      return acc;
+    }, {});
+  }, [timeLeft, inPts]);
+
+  const timesLeftTip = useMemo(() => {
+    return Object.keys(timeLeft).reduce((acc, key, index) => {
+      acc[inPts_[index]] = timeLeft[key];
+      return acc;
+    }, {});
+  }, [timeLeft, inPts_]);
 
   return {
     timesLeft,
-    timesLeftTip
+    timesLeftTip,
   };
 };

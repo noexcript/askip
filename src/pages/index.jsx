@@ -11,7 +11,8 @@ import NotFound from "./notFound";
 import Login from "./login";
 import Main from "./main";
 import TimingMiddleware from "@/middleware/timingMiddleware";
-import Luck from "./luck";
+import Luck from "./fan";
+import Fan from "./fan";
 
 
 
@@ -30,7 +31,7 @@ const Pages = () => {
                             </TimingMiddleware>
                         } />
                         <Route path="/participant/:link" element={< Home />} />
-                        <Route path="/winner" element={< Luck />} />
+                        <Route path="/fans" element={< Fan />} />
                         <Route path="/about" element={<About />} />
                     </Route>
                     <Route path="/login-askipmob" element={<Login />} />

@@ -1,20 +1,20 @@
 
-import Winner from "@/components/winner";
+import Fans from "@/components/fans";
 import ContainerPage from "../components/containerPage";
-import Overlay from "../components/overlay";
+
 import WrapperPage from "@/components/wrapperPage";
 
 // import Video from "../components/video";
 
 
-export default function Luck() {
+export default function Fan() {
 
     return (
 
         <ContainerPage>
             {/* <Overlay /> */}
             <WrapperPage className='items-center md:justify-center sm:mt-12'>
-                <Winner />
+                <Fans />
             </WrapperPage>
         </ContainerPage >
     )
