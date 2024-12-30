@@ -31,10 +31,10 @@ const Pages = () => {
                             </TimingMiddleware>
                         } />
                         <Route path="/participant/:link" element={< Home />} />
-                        <Route path="/fans" element={< Fan />} />
+                        {/* <Route path="/fans" element={< Fan />} /> */}
                         <Route path="/about" element={<About />} />
                     </Route>
-                    <Route path="/login-askipmob" element={<Login />} />
+                    {/* <Route path="/login-askipmob" element={<Login />} /> */}
                     <Route path="*" element={<NotFound />} />
                 </Routes>
 

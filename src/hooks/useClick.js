@@ -18,7 +18,6 @@ const useClick = () => {
       if (!clientId) return;
 
       const clientRef_ = doc(db, "clients", clientId);
-
       const data = await getDoc(clientRef_);
 
       if (!data.exists()) return;
