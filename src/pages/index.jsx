@@ -13,6 +13,7 @@ import Main from "./main";
 import TimingMiddleware from "@/middleware/timingMiddleware";
 import Luck from "./fan";
 import Fan from "./fan";
+import Error from "./error";
 
 
 
@@ -24,18 +25,19 @@ const Pages = () => {
             {isTiming && <Timing />}
             <Router>
                 <Routes>
-                    <Route path="/" element={<Main />} >
+                    {/* <Route path="/" element={<Main />} >
                         <Route index element={
                             <TimingMiddleware>
                                 < Home />
                             </TimingMiddleware>
                         } />
-                        <Route path="/participant/:link" element={< Home />} />
+                        <Route path="/participant/:link" element={< Home />} /> */}
                         {/* <Route path="/fans" element={< Fan />} /> */}
-                        <Route path="/about" element={<About />} />
-                    </Route>
+                        {/* <Route path="/about" element={<About />} /> */}
+                    {/* </Route> */}
                     {/* <Route path="/login-askipmob" element={<Login />} /> */}
-                    <Route path="*" element={<NotFound />} />
+                    <Route path="/" element={<Error />} ></Route>
+                    <Route path="*" element={<Error />} />
                 </Routes>
 
             </Router>
